@@ -7,7 +7,9 @@
   "scripts": {
     "start": "budo --live --verbose --port 3000 --open",
     "deploy": "ghpages",
-    "ghpages": "ghpages"
+    "ghpages": "ghpages",
+    "sass" : "node-sass css/scss/style.scss --output css --source-map-embed --source-map-contents --output-style compressed",
+    "sass:watch": "npm run sass -- --watch"
   },
   "devDependencies": {
     "budo": "^7.0.0",
@@ -20,5 +22,8 @@
     "aframe-scene",
     "webvr",
     "vr"
-  ]
+  ],
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
